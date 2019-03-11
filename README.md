@@ -6,7 +6,14 @@
 
 <a href="https://eikaiwa.dmm.com/uknow/">"DMM英会話なんてuKnow?"</a> (my translation is "DMM: how do you say it in English conversation?") is a free web site service where a site visitor posts a Japanese sentence and English experts (eg English teachers, native speakers etc.) replies its English translations as they believe their reply/replies suit the questioner's situation the most.
 
+By today (March 11th, 2019), 60K+ questions were posted and 150K English translations were answered.
+   </br>
+   <img width=600 src="./img/SimilarLineFromDMM_00.JPG">
 
+</br>
+
+
+<hr>
 
 In this repository, I saved the files for my personal app which does: 
 ###  1) web scraping from "DMM English uknow" site pages on Python and *selenium* package, 
