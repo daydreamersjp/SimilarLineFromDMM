@@ -36,7 +36,8 @@ In this repository, I saved the files for my personal app which does:
 ##  1) Web scraping from "DMM English uknow" site pages on Python and *selenium* package.
 
 The whole process in this step was implemented on Jupyter Notebook as ./local_files/1. Scraping_DMM_uKnow.ipynb, and the following is the 'un-ipynb-ed' code block:
-'''python
+
+```python
 from selenium import webdriver
 import pandas as pd
 
@@ -72,6 +73,6 @@ while True:
         browser.get(browser.find_elements_by_xpath(pager_next_xpath)[0].get_attribute("href"))
 
 df.to_csv("output.csv", encoding="utf-16")
-'''
+```
 
 
