@@ -47,7 +47,7 @@ In this repository, I saved the files for my personal app which does:
 As a matter of course, the same app can be accessible from cell phones.
 
 </br>
-<img width=600 src="./img/SimilarLineFromDMM_04_2.PNG">
+<img width=300 src="./img/SimilarLineFromDMM_04_2.PNG">
 </br>
 
 </br>
