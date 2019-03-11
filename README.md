@@ -25,5 +25,7 @@ In this repository, I saved the files for my personal app which does:
 </br>
 
 ###  4) making the app externally accessible through HTML by running it on AWS Linux instance.
+   <img width=600 src="./img/SimilarLineFromDMM_04.JPG">
+</br>
 </br>
 
