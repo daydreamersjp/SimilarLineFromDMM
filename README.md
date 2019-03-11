@@ -19,6 +19,9 @@ In this repository, I saved the files for my personal app which does:
 ###  3) deployment as an app returning similar Japanese sentence by similarity order against user-posted Japanese sentence using *Flask*, and 
    - ./AWS_files/similarity.py
    - ./AWS_files/app.py
+   </br>
+   <img width=600 src="./img/SimilarLineFromDMM_03.JPG">
+</br>
 </br>
 
 ###  4) making the app externally accessible through HTML by running it on AWS Linux instance.
