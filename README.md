@@ -34,9 +34,9 @@ In this repository, I saved the files for my personal app which does:
 </br>
 
 ##  1) Web scraping from "DMM English uknow" site pages on Python and *selenium* package.
-
+</br>
 The whole process in this step was implemented on Jupyter Notebook as ./local_files/1. Scraping_DMM_uKnow.ipynb, and the following is the 'un-ipynb-ed' code block:
-
+</br>
 ```python
 from selenium import webdriver
 import pandas as pd
