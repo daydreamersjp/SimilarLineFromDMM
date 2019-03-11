@@ -15,6 +15,6 @@ In this repository, I saved the files for my personal app which does:
    - ./AWS_files/app.py
 </br>
 
-####  4) making the app accessible through HTML from the world by running it on AWS Linux instance.
+####  4) making the app externally accessible through HTML by running it on AWS Linux instance.
 </br>
 
