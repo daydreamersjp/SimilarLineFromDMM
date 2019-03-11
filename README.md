@@ -69,6 +69,7 @@ As a matter of course, the same app can be accessible from cell phones.
 </br>
 The whole process in this step was implemented on Jupyter Notebook as ./local_files/1. Scraping_DMM_uKnow.ipynb, and the following is the 'un-ipynb-ed' code block:
 </br>
+
 ```python
 from selenium import webdriver
 import pandas as pd
