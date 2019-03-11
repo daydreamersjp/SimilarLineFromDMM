@@ -3,8 +3,9 @@
 >
 In this repository, I saved the files for my personal app which does: 
 ####  1) web scraping from "DMM English uknow" site pages on Python and *selenium* package, 
-   - ./local_files/1. Scraping_DMM_uKnow.ipynb 
+   - ./local_files/1. Scraping_DMM_uKnow.ipynb
    ![](./img/SimilarLineFromDMM_01.JPG)
+
 </br>
 
 ####  2) establishment of data pipeline to calculate Japanese sentence similarity based on TF-IDF processed over scraped Japanese sentences at step 1) and encoded by *MeCab*, 
