@@ -35,4 +35,43 @@ In this repository, I saved the files for my personal app which does:
 
 ##  1) Web scraping from "DMM English uknow" site pages on Python and *selenium* package.
 
+The whole process in this step was implemented on Jupyter Notebook as ./local_files/1. Scraping_DMM_uKnow.ipynb, and the following is the 'un-ipynb-ed' code block:
+'''python
+from selenium import webdriver
+import pandas as pd
+
+chrome_options = webdriver.ChromeOptions()
+chrome_options.add_argument("--no-sandbox")
+chrome_options.add_argument("--disable-setuid-sandbox")
+
+browser = webdriver.Chrome(executable_path="C:\Drivers\chromedriver\chromedriver.exe")
+url = "https://eikaiwa.dmm.com/uknow/new_answer/"
+browser.get(url)
+
+# Element Selector
+post_css = "div.container-padding.border-all-solid.link"
+pager_next_xpath = "//a[@rel='next']"
+df = pd.read_csv("default.csv", index_col=0)
+
+page_num = 0
+while True:
+    posts = browser.find_elements_by_css_selector(post_css)
+    for post in posts:
+        try:
+            question = post.find_element_by_tag_name("a").text
+            url = post.find_element_by_tag_name("a").get_attribute("href")
+            se = pd.Series([question, url], ["question", "url"])
+            df = df.append(se, ignore_index = True)
+        except Exception as e:
+            print("Error:", e)
+    page_num += 1
+    print("Page", page_num, "collected")
+    if len(browser.find_elements_by_xpath(pager_next_xpath))==0:
+        break
+    else:
+        browser.get(browser.find_elements_by_xpath(pager_next_xpath)[0].get_attribute("href"))
+
+df.to_csv("output.csv", encoding="utf-16")
+'''
+
 
