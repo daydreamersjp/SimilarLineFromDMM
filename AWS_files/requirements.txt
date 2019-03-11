@@ -1,0 +1,10 @@
+pandas==0.24.1
+numpy==1.15.4
+scikit-learn==0.20.2
+Flask==1.0.2
+pykakasi==0.94
+requests==2.21.0
+pyopenssl==19.0.0
+line-bot-sdk==1.8.0
+gunicorn==19.9.0
+Flask-SSLify==0.1.5
