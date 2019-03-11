@@ -13,14 +13,14 @@ By today (March 11th, 2019), 60K+ questions were posted and 150K+ English transl
 
 </br>
 
-This web site contains innumerable amounts of *Japanese sentence-English sentance* sets and they are much better for Japanese-speaking-as-the-first-language English learners than a Japanese-English dictionary in the ways that: 
+This web site contains innumerable amounts of *Japanese sentence-English sentence* sets and they are much better for Japanese-speaking-as-the-first-language English learners than a Japanese-English dictionary in the ways that: 
 </br>
 - the DMM site contains the sentences, not just words, and
 - one Japanese sentence is translated into multiple English candidates, which let the site visitors recognize the range of possible English expressions and have a chance to select the one matching their own situation the best.
 
 </br>
 
-My intenstion this time has been to make a wrap-up app to retrieve the Japanese sentences which have been ever posted in the DMM site, similar to a Japanese sentence the app user requested, by similarity order.
+__My intenstion this time has been to make a wrap-up app to retrieve the Japanese sentences which have been ever posted in the DMM site, similar to a Japanese sentence the app user requested, by similarity order.__
 
 </br>
 
