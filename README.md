@@ -3,8 +3,9 @@
 >
 In this repository, I saved the files for my personal app which does: 
   1) web scraping from "DMM English uknow" site pages on Python and *selenium* package, 
-   - ./local_files/1. Scraping_DMM_uKnow.ipynb </br>
-
+   - ./local_files/1. Scraping_DMM_uKnow.ipynb 
+</br>
+</br>
 
 
 
