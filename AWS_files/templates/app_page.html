@@ -1,0 +1,49 @@
+<!DOCTYPE html><html lang="ja">
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<style type="text/css" media="screen">
+		body{
+			background-color:#e6ecf0;
+		}	
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 mb-5">
+				<h1>Search Similar Translation in DMM English uknow Site</a></h1>
+				<p>Here input your Janpanese line to search:</p>
+				<form class="form-inline" method="post">
+					<div class="form-group">
+						<label class="sr-only" for="line_input"></label>
+						<div class="input-group">
+							<input id="line_input" name="line_input" placeholder="Janapese line here." type="text" class="form-control">
+						</div>
+					</div>
+					<button type="submit" class="btn btn-primary">Search</button>
+				</form>
+			</div>
+		</div>
+		<div class="row">
+			{% if line_output %}
+				<div class="col-md-12 mb-3">Input line: {{ line_input }}</div>
+				<div class="col-md-12">
+					{% for table in line_output %}
+					<!-- <div class="col-md-12"> -->
+						{% if table.startswith('https:') %}
+							<a href=' {{ table|safe }} '>DMM uknow Page</a>
+						{% else %}
+							{{ table|safe }}
+						{% endif %}
+						<!-- {{ line_ouput }} -->
+					<!-- </div> -->
+					{% endfor %}
+				</div>
+			{% endif %}
+		</div>
+	</div>
+
+</body>
+</html>
