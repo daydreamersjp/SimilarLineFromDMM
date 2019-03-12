@@ -111,25 +111,35 @@ while True:
 df.to_csv("output.csv", encoding="utf-16")
 ```
 
+</br>
 
-The *selenium* package is supposed to crawl this kind of website pages one by one:
+This code using *selenium* package is supposed to crawl this kind of website pages one by one:
  
 <img width=600 src="./img/SimilarLineFromDMM_01_1.JPG">
 
-This page contains the blocks with Japanese lines that the web page visitors posted, with links to another page having ‘answers’ by experts. Using Chrome dev tool, find the CSS selectors or other identifiers to locate the positions of Japanese lines. Finally also find a selector for the ‘next page’ and set to repeat the same crawling in another pages again and again.
+</br>
 
+This web page contains the blocks with Japanese lines that the web page visitors posted to ask for English translation, with links to another page having ‘answers’ by experts. Using Chrome DevTools, find the CSS selectors or other identifiers to locate the positions of Japanese lines. Finally also find a selector for the ‘next page’ and set to repeat the same crawling in another similar pages with Japanese sentence blocks again and again.
 
 The final output will be saved as a CSV file output.csv in the end. 
 
-Since my crawler does not include the appropriate set up for the permission request about the crawling, it stopped after crawl out of a few hundred pages, with nearly a thousand Japanese lines. So I should have done a better job, but for a illustration purpose I left it to a future improvement for now.
+</br>
 
+Since my crawler does not include the appropriate set up for the permission request about the crawling, it stopped after crawling out a thoudand pages, with nearly ten thousands Japanese lines. So I should have done a better job, but for a this illustration purpose I left it to a future improvement for now.
 
+</br>
 
-To do the text mining on the crawled Japanese sentences, the first job is to split the lines into separate words. You may or may not know, the raw Japanese is the sequence of characters not the sequence of words. 
+<hr>
 
+</br>
 
+##  2) establishment of data pipeline to calculate Japanese sentence similarity based on TF-IDF processed over scraped Japanese sentences at step 1) and encoded by *MeCab*.
+</br>
+To do the text mining on the crawled Japanese sentences, the first job is to split a sentence into words. You may or may not know, the raw Japanese is the sequence of characters not the sequence of words, and which serie of characters consists of a word cannot be mechanically obvious.
 
-This job is very tough to do because the algorithm should handle the sentences in a semantic way not only in a mechanical way. generally people start out with the program somebody already has created to do this job. MeCab is one of the most famous packages to do that job.
+</br>
+
+This job is very tough to do because the algorithm should handle the sentences in a semantic way. Generally, people start the analysis with the programs somebody already created to do this job. *MeCab* is one of the most famous packages to do that job.
 
 
 With MeCab a sentence will be partitioned into a set of words with their classes, the original forms if they are conjugated and the other useful information.
