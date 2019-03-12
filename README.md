@@ -1,7 +1,16 @@
 # SimilarLineFromDMM
 </br> 
 
-*keyword: python, web crawling, selenium, text mining, MeCab, TF-IDF, sentence similarity, flask, web app served from Amazon AWS, HTML Bootstrap*
+*keywords:*
+- python
+- web crawling using selenium
+- text mining
+- MeCab
+- TF-IDF
+- sentence similarity
+- flask
+- web app served from Amazon AWS
+- HTML Bootstrap
 
 </br>
 
@@ -47,6 +56,7 @@ In this repository, I saved the files for my personal app which does:
 ###  3) deployment as an app returning similar Japanese sentence by similarity order against user-posted Japanese sentence using *Flask*, and 
    - ./AWS_files/similarity.py
    - ./AWS_files/app.py
+   - ./AWS_files/templates/app_page.html
    </br>
    <img width=600 src="./img/SimilarLineFromDMM_03.JPG">
 </br>
@@ -71,6 +81,7 @@ As a matter of course, the same app can be accessible from cell phones.
 ##  1) Web scraping from "DMM English uknow" site pages on Python and *selenium* package.
 </br>
 The whole process in this step was implemented on Jupyter Notebook as ./local_files/1. Scraping_DMM_uKnow.ipynb, and the following is the 'un-ipynb-ed' code block:
+
 </br>
 
 ```python
@@ -123,8 +134,6 @@ This web page contains the blocks with Japanese lines that the web page visitors
 
 The final output will be saved as a CSV file output.csv in the end. 
 
-</br>
-
 Since my crawler does not include the appropriate set up for the permission request about the crawling, it stopped after crawling out a thoudand pages, with nearly ten thousands Japanese lines. So I should have done a better job, but for a this illustration purpose I left it to a future improvement for now.
 
 </br>
@@ -143,7 +152,7 @@ A famous example is "すもももももももものうち" (meaming 'Both plums 
 
 </br>
 
-This job is known being tough to do because the algorithm should handle the sentences in a semantic way. Generally, people start the analysis with the programs somebody already created to do this job. *MeCab* is one of the most famous packages to do that job.
+This job is notorious for being tough to do because the algorithm should handle the sentences in a semantic way. Generally, people start the analysis with the programs somebody already created to do this job. <a href='https://en.wikipedia.org/wiki/MeCab'>MeCab</a> is one of the most famous packages to do that job.
 
 </br>
 
@@ -234,7 +243,7 @@ Out: ['tsuke_no_g_つけ',
 
 </br>
 
-<a href="https://en.wikipedia.org/wiki/Tf%E2%80%93idf">TF-IDF</a> is a simple and easy algorithm to vectorize the sentences from a corpus (LINK). I treated the approximately 10,000 Japanese sentences crawled at step 1 as a corpus and vectorize them. I tried my version of the function to vectorize sentences but in the end I just used a package *TfidfVectorizer* to do in the pursuit of a better performance in the final app.
+<a href="https://en.wikipedia.org/wiki/Tf%E2%80%93idf">TF-IDF</a> is a simple and easy algorithm to vectorize the sentences from a corpus. I treated the approximately 10,000 Japanese sentences crawled at step 1 as a corpus and vectorize them. I tried my version of the function to vectorize sentences but in the end I just used a package *TfidfVectorizer* to do in the pursuit of a better performance in the final app.
 
 </br>
 
@@ -331,9 +340,11 @@ Out:
 
 ##  3) Deployment as an app returning similar Japanese sentence by similarity order against user-posted Japanese sentence using *Flask*.
 </br>
+
 *Flask* is a handy python package which API-nizes the Python code. There are some grammar we need to understand to begin with but once the code is ready to accept the POST requests from a user-input sentence the code treats it as a variable inside the code. 
 
 </br>
+
 ```python
 from flask import Flask, render_template, request, logging, Response, redirect, flash
 from similarity import generate_similarity
@@ -484,8 +495,13 @@ if __name__ == "__main__":
 </br>
 
 Since it in public it can be accessible from any devices including cell phones.
+
 </br>
+
 <img width=600 src="./img/SimilarLineFromDMM_04.JPG">
+
 </br>
+
 <img width=300 src="./img/SimilarLineFromDMM_04_2.PNG">
+
 </br>
