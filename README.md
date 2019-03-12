@@ -113,7 +113,8 @@ df.to_csv("output.csv", encoding="utf-16")
 
 
 The *selenium* package is supposed to crawl this kind of website pages one by one:
-
+ 
+ <img width=300 src="./img/SimilarLineFromDMM_01_01.PNG">
 
 This page contains the blocks with Japanese lines that the web page visitors posted, with links to another page having ‘answers’ by experts. Using Chrome dev tool, find the CSS selectors or other identifiers to locate the positions of Japanese lines. Finally also find a selector for the ‘next page’ and set to repeat the same crawling in another pages again and again.
 
