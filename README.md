@@ -32,7 +32,7 @@ This web site contains innumerable amounts of *Japanese sentence-English sentenc
 
 </br>
 
-__My intenstion this time has been to make a wrap-up app to retrieve the Japanese sentences which have been ever posted in the DMM site, similar to a Japanese sentence the app user requested, by similarity order.__
+__My intention this time has been to make a wrap-up app to retrieve the Japanese sentences which have been ever posted in the DMM site, similar to a Japanese sentence the app user requested, by similarity order.__
 
 </br>
 
@@ -134,7 +134,7 @@ This web page contains the blocks with Japanese lines that the web page visitors
 
 The final output will be saved as a CSV file output.csv in the end. 
 
-Since my crawler does not include the appropriate set up for the permission request about the crawling, it stopped after crawling out a thoudand pages, with nearly ten thousands Japanese lines. So I should have done a better job, but for a this illustration purpose I left it to a future improvement for now.
+Since my crawler does not include the appropriate set up for the permission request about the crawling, it stopped after crawling out a thousand pages, with nearly ten thousands Japanese lines. So I should have done a better job, but for a this illustration purpose I left it to a future improvement for now.
 
 </br>
 
@@ -144,11 +144,11 @@ Since my crawler does not include the appropriate set up for the permission requ
 
 ##  2) Establishing data pipeline to calculate Japanese sentence similarity based on TF-IDF processed over scraped Japanese sentences at step 1) and encoded by *MeCab*.
 </br>
-To do the text mining on the crawled Japanese sentences, the first job is to split a sentence into words. You may or may not know, the raw Japanese is the sequence of characters not the sequence of words, and which serie of characters consists of a word cannot be mechanically obvious.
+To do the text mining on the crawled Japanese sentences, the first job is to split a sentence into words. You may or may not know, the raw Japanese is the sequence of characters not the sequence of words, and which series of characters consists of a word cannot be mechanically obvious.
 
 </br>
 
-A famous example is "すもももももももものうち" (meaming 'Both plums and peaches are members of the peach family.') This sentence consists of 7 words and 12 characters, 8 characters out of 12 are exactly the same 'も' (reads *mo*).
+A famous example is "すもももももももものうち" (meaning 'Both plums and peaches are members of the peach family.') This sentence consists of 7 words and 12 characters, 8 characters out of 12 are exactly the same 'も' (reads *mo*).
 
 </br>
 
@@ -156,7 +156,7 @@ This job is notorious for being tough to do because the algorithm should handle 
 
 </br>
 
-With MeCab a sentence will be partitioned into a set of words with their classes, the original forms if they are conjugated and the other useful information. The following mecab output for "すもももももももものうち" represents it returns the 7 words in each line of output along with their gramatical information.
+With MeCab a sentence will be partitioned into a set of words with their classes, the original forms if they are conjugated and the other useful information. The following mecab output for "すもももももももものうち" represents it returns the 7 words in each line of output along with their grammatical information.
 
 </br>
 
@@ -289,7 +289,7 @@ __The downside of the TF-IDF is that it does not treat the words in a semantic w
 
 </br>
 
-After vectorization, the vecteoizes matrix (row x column: sentences in the corpus x bag of words), the vectorizer, the dataframe of original sentences were saved to pickles files.
+After vectorization, the vectorizes matrix (row x column: sentences in the corpus x bag of words), the vectorizer, the pandas dataframe of original sentences were saved to pickles files.
 
 </br>
 
@@ -433,7 +433,7 @@ In the next step, we will see how we can deploy this to the world to let anyone 
 
 ##  4) Making the app externally accessible through HTML by running it on AWS Linux instance.
 </br>
-There is a long line of items to learn for a beginner to start first AWS EC2 instance. As an exaple, see <a href='https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html#ec2-launch-instance'>AWS official tutorial</a> to set up the AWS EC2 Linux instance.
+There is a long line of items to learn for a beginner to start first AWS EC2 instance. As an example, see <a href='https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html#ec2-launch-instance'>AWS official tutorial</a> to set up the AWS EC2 Linux instance.
 
 </br>
 
@@ -471,7 +471,7 @@ The app.py has a minor edits on where to serve the HTML page at app.run portion.
 ```
 python app.py
 ```
-on terminal, the HTML page should be accessible at *[public IP address of   AWS incetance]:[port number assigned in the code]*. For my AWS instance, it was *18.222.37.28:5000* (currently intentioanally inactivated). 
+on terminal, the HTML page should be accessible at *[public IP address of   AWS incetance]:[port number assigned in the code]*. For my AWS instance, it was *18.222.37.28:5000* (currently intentionally inactivated). 
 
 </br>
 
