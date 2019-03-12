@@ -156,7 +156,7 @@ This job is notorious for being tough to do because the algorithm should handle 
 
 </br>
 
-With MeCab a sentence will be partitioned into a set of words with their classes, the original forms if they are conjugated and the other useful information.
+With MeCab a sentence will be partitioned into a set of words with their classes, the original forms if they are conjugated and the other useful information. The following mecab output for "すもももももももものうち" represents it returns the 7 words in each line of output along with their gramatical information.
 
 </br>
 
