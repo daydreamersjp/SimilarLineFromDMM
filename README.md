@@ -467,7 +467,11 @@ In our case, downloading MeCab to AWS instance was the far most difficult part o
 
 </a>
 
-The app.py has a minor edits on where to serve the HTML page at app.run portion. When it runs successfully, the HTML page should be accessible at [public IP address of   AWS incetance]:[port number assigned in the code]. For my version, it was 18.222.37.28:5000 (currently inactive). 
+The app.py has a minor edits on where to serve the HTML page at app.run portion. When it runs successfully with:
+```
+python app.py
+```
+on terminal, the HTML page should be accessible at *[public IP address of   AWS incetance]:[port number assigned in the code]*. For my AWS instance, it was *18.222.37.28:5000* (currently intentioanally inactivated). 
 
 </br>
 
