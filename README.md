@@ -9,7 +9,7 @@
 - TF-IDF
 - sentence similarity
 - flask
-- web app served from Amazon AWS
+- web app served from Amazon AWS Linux instance
 - HTML Bootstrap
 
 </br>
