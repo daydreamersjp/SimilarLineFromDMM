@@ -1,5 +1,4 @@
 # SimilarLineFromDMM
-
 </br> 
 
 *keyword: web crawling, selenium, python, flask, MeCab, web app served from Amazon AWS, HTML Bootstrap, text mining, TF-IDF, sentence similarity*
