@@ -465,13 +465,25 @@ pip install -r requirements.txt
 
 In our case, downloading MeCab to AWS instance was the far most difficult part of the preparations because it cannot be done by requirement.txt. To do this, refer to <a href='https://www.yoshiislandblog.net/2018/03/21/amazon-linux_mecab/'>this page</a> or <a href='https://www.iruca21.com/entry/2017/03/26/191846'>this page</a> (both in Japanese).
 
-</a>
+</br>
+
+I transferred the files to be imported in the app using FileZilla. The files tranferred was the followings as created in step 2 or 3:
+- ./AWS_files/similarity_data/corpus_vectorized.pkl
+- ./AWS_files/similarity_data/vectorizer.pkl
+- ./AWS_files/similarity_data/df_clean.pkl
+- ./AWS_files/templates/app_page.html
+
+</br>
+
+AWS Security Group to the instance has to accept all traffics. See on AWS EC2 Dashbord -> NETWORK & SECURITY -> Security Groups -> Selecting the Security Group used by the instance on the right pane -> Press Edit button and set.
+
+</br>
 
 The app.py has a minor edits on where to serve the HTML page at app.run portion. When it runs successfully with:
 ```
 python app.py
 ```
-on terminal, the HTML page should be accessible at *[public IP address of   AWS incetance]:[port number assigned in the code]*. For my AWS instance, it was *18.222.37.28:5000* (currently intentionally inactivated). 
+on terminal, the HTML page should be accessible at *[public IP address of   AWS incetance]:[port number assigned in the code]*. For my AWS instance, it was *18.222.37.28:5000* (no use now due to intentional deactivation). 
 
 </br>
 
