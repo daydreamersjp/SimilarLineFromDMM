@@ -433,7 +433,7 @@ In the next step, we will see how we can deploy this to the world to let anyone 
 
 ##  4) Making the app externally accessible through HTML by running it on AWS Linux instance.
 </br>
-There is a long line of items to learn for a beginner to start first AWS EC2 instance. As an example, see <a href='https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html#ec2-launch-instance'>AWS official tutorial</a> to set up the AWS EC2 Linux instance.
+There is a long list of items to learn for a beginner to start first AWS EC2 instance. As an example, see <a href='https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html#ec2-launch-instance'>AWS official tutorial</a> to set up the AWS EC2 Linux instance.
 
 </br>
 
